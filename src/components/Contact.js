@@ -10,15 +10,15 @@ const user = {
 
 function Contact () {
 
-    const status = user.status ? 'status-online' : 'status-offline'
+    const status=user.status ? 'status-online' : 'status-offline'
 
     return (
-    <div className = "Contact">
-        <img className ="avatar" src={user.image} alt="avatar"/>
-        <div className ="status">
-            <h4 className ="name">{user.name}</h4>
-
-            <div className={status}>
+    <div className="Contact">
+        <img className="avatar" src={user.image} alt="avatar"/>
+        <div className="status">
+            <h4 className="name">{user.name}</h4>
+            <div>
+                <span className={status}></span>
                 <p className="status-text">{user.status ? 'online' : 'offline'}</p>
             </div>
         </div>

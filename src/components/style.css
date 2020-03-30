@@ -25,7 +25,6 @@
 .Contact .status .status-text {
     color: #999;
     margin: 0;
-    padding-left: 20px;
     display: inline-block;
 }
 
@@ -41,12 +40,8 @@
 
 .Contact .status .status-online {
     background: #aed581;
-    margin-top: 10px;
-
 }
 
 .Contact .status .status-offline {
     background: #f4511e;
-    margin-top: 10px;
-
 }
