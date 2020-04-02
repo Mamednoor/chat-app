@@ -4,7 +4,7 @@ import './style.css';
 
 class Contact extends React.Component { 
     state = {
-        status : false,
+        status : {props.user.online},
     }
     render() {
         const {avatar,name} = this.props
