@@ -3,24 +3,24 @@ import './style.css';
 
 
 class Contact extends React.Component { 
-    constructor(props) {
-      super(props);
-      this.state = {
-        status : true,
-      };
+    state = {
+        status : false,
     }
     render() {
+        console.log(this)
+        const {avatar,name} = this.props
+        const {status} = this.state
         return (
             <div className="Contact">
-                <img className="avatar" src={this.props.avatar} alt={this.props.name}/>
+                <img className="avatar" src={avatar} alt={name}/>
                 <div>
-                    <h4 className="name">{this.props.name}</h4>
+                    <h4 className="name">{name}</h4>
                     <div className="status">
-                        <span className={this.props.status ? 'status-online' : 'status-offline'}></span>
-                        <button onClick={event => {const newStatus = !this.state.status; this.setState({status: newStatus});}}>{this.props.online ? 'online' : 'offline'}</button>
+                        <span className={status ? 'status-online' : 'status-offline'}></span>
+                        <button onClick={() => this.setState({status: !status})}>{status ? 'online' : 'offline'}</button>
                     </div>
                 </div>
-            </div>    
+            </div>
         );
     }
 }
