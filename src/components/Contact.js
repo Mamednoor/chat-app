@@ -7,7 +7,6 @@ class Contact extends React.Component {
         status : false,
     }
     render() {
-        console.log(this)
         const {avatar,name} = this.props
         const {status} = this.state
         return (
